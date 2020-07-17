@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/header
+    body.login
+        .contenedor-formulario
+            h1= pageName
+            P Agrega tu email
+
+            if locals.mensajes
+                .alertas
+                    each categoria in Object.keys(locals.mensajes)
+                        each error in mensajes[categoria]
+                            .alerta(class=`${categoria}`)
+                                p=error
+
+            form(action="/reset" class="caja caja-login" id="formulario" method="post")
+                .campo
+                    label(for="email") E-mail:
+                    input(type="email" name="email" placeholder="Correo electronico" value= email)
+                .campo.enviar
+                    input(type="submit" class="boton" value="Reestablecer password")
+                .acciones
+                    a(href="/login") Ya lo recorde
+
+        script(src="/dist/bundle.js")
