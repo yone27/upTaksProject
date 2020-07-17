@@ -3,9 +3,10 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon ./index.js",
-        "dev": "concurrently \" npm run start \" \" npm run watch \"",
-        "watch": "webpack --w --mode development"
+        "watch": "nodemon ./index.js",
+        "start": "node ./index.js",
+        "dev": "concurrently \" npm run watch \" \" npm run watchwebpack \"",
+        "watchwebpack": "webpack --w --mode development"
     },
     "keywords": [],
     "author": "",
