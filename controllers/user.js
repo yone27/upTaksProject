@@ -64,7 +64,7 @@ exports.formResetPassword = (req, res) => {
 
 // Confirmar cuenta
 exports.confirmAccount = async(req, res) => {
-    const user = Users.findOne({
+    const user = await Users.findOne({
         where: {
             email: req.params.email
         }

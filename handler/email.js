@@ -6,8 +6,7 @@ const htmlToText = require('html-to-text')
 const emailConfig = require('../config/email')
 
 let transport = nodemailer.createTransport({
-    host: emailConfig.host,
-    port: emailConfig.host,
+    service: 'gmail',
     auth: {
         user: emailConfig.user,
         pass: emailConfig.password
@@ -23,6 +22,7 @@ const generarHtml = (file, opc = {}) => {
 exports.enviar = async(opc) => {
     const html = generarHtml(opc.file, opc)
     const text = htmlToText.fromString(html)
+
     let mailOptions = {
         from: 'Uptask <no-reply@uptask.com>',
         to: opc.user.email,

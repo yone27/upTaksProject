@@ -1,9 +1,7 @@
 const Sequelize = require('sequelize')
-const db = new Sequelize('uptasknode', 'root', '', {
-    host: 'localhost',
+const db = new Sequelize('heroku_56848359e2c781c', 'b92ee7879695db', 'f959fb78', {
+    host: 'us-cdbr-east-02.cleardb.com',
     dialect: 'mysql', // 'sqlite' | 'postgres' | 'mssql'
-    operatorsAliases: false,
-    port: 3306,
     define: {
         timestamps: false
     },
@@ -16,3 +14,7 @@ const db = new Sequelize('uptasknode', 'root', '', {
 })
 
 module.exports = db
+
+//joseacaban1999@gmail.com
+
+//mysql://b92ee7879695db:f959fb78@us-cdbr-east-02.cleardb.com/heroku_56848359e2c781c?reconnect=true
