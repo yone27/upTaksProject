@@ -13,6 +13,7 @@ const db = new Sequelize('heroku_56848359e2c781c', 'b92ee7879695db', 'f959fb78',
     }
 })
 
+
 module.exports = db
 
 //joseacaban1999@gmail.com

@@ -30,6 +30,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, './views'))
 
+
 //Middlewares
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'))
