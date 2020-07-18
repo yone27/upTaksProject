@@ -1,7 +1,7 @@
 const passport = require('passport')
 const bcrypt = require('bcrypt-nodejs')
 const crypto = require('crypto')
-const Sequelize = require('Sequelize')
+const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 
 //Ref models
