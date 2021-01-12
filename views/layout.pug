@@ -3,20 +3,36 @@ html(lang="en")
     head
         include partials/header
     body
-        header.barra
-            h1 Administrador de Proyectos
-            a(href="/logout") Cerrar sesión
-        main.contenedor
-            aside.contenedor-proyectos
-                .panel.crear-proyecto
-                    a(href="/project" class="boton") Proyectos
-                        span +
-                .panel.lista-proyectos
-                    h2 Proyectos
-                    ul#proyectos.proyectos
-                        if(projects.length)
-                            each project in projects
-                                li
-                                    a(href=`/projects/${project.url}`)= project.name
+        header.menu
+            a(href="/" class="menu-logo") 
+                img(src="" alt="Mi logo")
+            a(href="/" class="menu-link active") 
+                i.fa.fa-cube.icon
+                p Dashboard
+            a(href="/project" class="menu-link") 
+                i.fa.fa-briefcase.icon
+                p Projects
+            a(href="/project" class="menu-link") 
+                i.fa.fa-cubes.icon
+                p Task
+            a(href="/project" class="menu-link") 
+                i.fa.fa-envelope.icon
+                p Settings
+
+            //h2 Proyectos
+            //ul#proyectos.proyectos
+            //if(projects.length)
+            // each project in projects
+            //li
+            //a(href=`/projects/${project.url}`)= project.name
+        main.main-container
+            aside.top-menu
+                .input-search
+                    i.fa.fa-search.icon
+                    input(type="text" placeholder="Search")
+                a(href="/logout" class="logout") 
+                    i.fa.fa-sign-out-alt
+                a(href="/logout" class="img-profile") 
+                    img(src="/man1.svg", alt="profile")
             block content
         script(src="/dist/bundle.js")

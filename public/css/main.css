@@ -1,0 +1,273 @@
+@import url("../fonts/Roboto-Regular.ttf");
+.color-tenue {
+    color: #9ea1af;
+}
+:root {
+    --color1: #fc6f27;
+    --color2: #1a2235;
+    --color3: #3d4353;
+    --graylighter: #f1f1f1;
+    font-family: "Roboto", sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color3);
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+/* Layout */
+body {
+    background-color: #f7f6f4;
+    display: flex;
+}
+
+.menu {
+    position: fixed;
+    height: 90vh;
+    width: 20vw;
+    margin: 3vw 0 0 2vw;
+}
+.main-container {
+    margin: 3vw 2vw 0 24vw;
+    width: 74vw;
+}
+.main-section {
+    display: flex;
+}
+.tasks-container,
+.projects-container {
+    flex: 0.5;
+}
+.projects-todo,
+.projects-doing,
+.projects-completed {
+    flex: 0.33;
+}
+.projects-container {
+    margin-right: 2.5vw;
+}
+
+/* Menu */
+.menu {
+    box-shadow: 0 0 10px -7px rgba(0, 0, 0, 0.3);
+}
+.menu-logo,
+.menu-link {
+    display: block;
+}
+.menu-logo {
+    text-align: center;
+    padding: 20px;
+}
+.menu-link {
+    padding: 15px 0 15px 15px;
+    text-transform: uppercase;
+    color: var(--color3);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+.menu-link p {
+    font-size: 14px;
+    font-weight: bold;
+}
+.menu-link .icon {
+    margin-right: 12px;
+    font-size: 1.3em;
+}
+.menu-link:hover p,
+.menu-link:hover i {
+    color: var(--color1);
+}
+.menu-link:hover {
+    border-right: 3px solid var(--color1);
+}
+
+.menu-link.active p,
+.menu-link.active i {
+    color: var(--color1);
+}
+.menu-link.active {
+    border-right: 3px solid var(--color1);
+}
+
+/* Top menu */
+.top-menu {
+    padding: 20px;
+    margin-bottom: 2.5vw;
+    display: flex;
+    align-items: center;
+}
+.logout {
+    margin-right: 15px;
+}
+.img-profile img {
+    max-width: 30px;
+}
+/* search input */
+.input-search {
+    background-color: #f7f6f4;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding: 10px 10px 10px 20px;
+    border-radius: 25px;
+}
+.input-search .icon {
+    margin-right: 8px;
+}
+.input-search > * {
+    color: var(--color3);
+    background: none;
+    border: none;
+}
+
+/* Card project */
+.project {
+    padding: 20px;
+}
+
+.project-a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project .doing,
+.project .completed {
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #dfdfdf;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.project .doing {
+    background: #f1f2f4;
+    color: #9ea1af;
+}
+.project .completed {
+    background: #e7f4e6;
+    color: #5aae52;
+}
+.img-project {
+    margin-bottom: 15px;
+}
+.project-a .img-project {
+    width: 20%;
+}
+.header-project {
+    width: 80%;
+}
+.footer-project {
+    margin-top: 20px;
+    width: 100%;
+}
+.progressbar {
+    height: 5px;
+    width: 100%;
+    background: #e7e9f2;
+    margin-top: 10px;
+}
+.progress {
+    height: 5px;
+    width: 30%;
+    background: #545dad;
+}
+.project:not(:last-child),
+.tasks-container:not(:last-child) {
+    margin-bottom: 2.5vw;
+}
+.headers-projects {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.project-b .footer-project > :not(:last-child) {
+    margin-right: 10px;
+}
+.project-b h3,
+.project-b p {
+    margin-bottom: 15px;
+}
+
+.projects-todo,
+.projects-doing {
+    margin-right: 2.5vw;
+}
+
+/* Card task */
+.task {
+    padding: 20px;
+    border-bottom: 1px solid #f1f2f7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.task-done .task-title {
+    color: #b1b4be;
+    position: relative;
+}
+.task-done .task-check {
+    color: #60b158;
+}
+.task-done .task-title::after {
+    content: "";
+    color: var(--color3);
+    width: 105%;
+    height: 2px;
+    display: block;
+    background: var(--color3);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+.task-header {
+    display: flex;
+    align-items: center;
+}
+.task-count {
+    margin-right: 13px;
+}
+.task-title {
+    font-weight: normal;
+}
+.tasks-header > * {
+    margin: 0;
+}
+.tasks-header {
+    padding: 20px;
+}
+.task-check {
+    font-size: 1.3em;
+    color: var(--color3);
+}
+.project,
+.project-a,
+.tasks-container,
+.top-menu,
+.menu {
+    background-color: #fff;
+    box-shadow: 0 0 10px -7px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.logout > * {
+    color: var(--color3);
+    font-size: 1.5em;
+}

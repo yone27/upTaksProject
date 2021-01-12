@@ -1,5 +1,109 @@
 extends layout
 
 block content
-    .contenido-principal
-        h1=pageName
+    section.main-section
+        .projects-container
+            article.project.project-a
+                aside.img-project
+                    img(src="" alt="Mi img")
+                header.header-project
+                    h3 Title project
+                    p summary one line...
+                footer.footer-project
+                    .doing Doing
+                    p Task Done: 25/50
+                    .progressbar
+                        .progress
+            article.project.project-a
+                aside.img-project
+                    img(src="" alt="Mi img")
+                header.header-project
+                    h3 Title project
+                    p summary one line...
+                footer.footer-project
+                    .completed Completed
+                    p Task Done: 25/50
+                    .progressbar
+                        .progress
+        .tasks-container
+            header.tasks-header
+                h2 My taks (20)
+            article.task
+                header.task-header
+                    span.task-count 01
+                    h3.task-title Create wireframe
+                aside
+                    i.far.fa-check-circle.task-check
+            article.task.task-done
+                header.task-header
+                    span.task-count 02
+                    h3.task-title Create wireframe
+                aside
+                    i.fas.fa-check-circle.task-check
+            article.task
+                header.task-header
+                    span.task-count 03
+                    h3.task-title Create wireframe
+                aside
+                    i.far.fa-check-circle.task-check
+    section.main-section
+        .projects-todo
+            header.headers-projects
+                h3 Working 
+                    span.color-tenue (03)
+            article.project.project-b
+                aside.img-project
+                    img(src="/img/about1.jpg" alt="Mi img")
+                header.header-project
+                    h3 Title project
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                footer.footer-project
+                    .doing Doing
+                    .completed Completed
+            article.project.project-b
+                header.header-project
+                    h3 Google clone
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                footer.footer-project
+                    .doing Doing
+        .projects-doing
+            header.headers-projects
+                h3 In progress 
+                    span.color-tenue (03)
+            article.project.project-b
+                header.header-project
+                    h3 Google clone
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                footer.footer-project
+                    .doing Doing
+            article.project.project-b
+                header.header-project
+                    h3 Google clone
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                footer.footer-project
+                    .doing Doing
+            article.project.project-b
+                header.header-project
+                    h3 Google clone
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                footer.footer-project
+                    .doing Doing
+        .projects-completed
+            header.headers-projects
+                h3 Completed 
+                    span.color-tenue (03)
+            article.project.project-b
+                header.header-project
+                    h3 Google clone
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                footer.footer-project
+                    .doing Doing
+            article.project.project-b
+                aside.img-project
+                    img(src="/img/about1.jpg" alt="Mi img")
+                header.header-project
+                    h3 Title project
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                footer.footer-project
+                    .doing Doing
+                    .completed Completed

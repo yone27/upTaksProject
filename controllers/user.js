@@ -20,28 +20,27 @@ exports.signup = async(req, res) => {
     try {
         await Users.create({
             email,
-            password
+            password,
+            activo : 1
         })
 
         // Crear una url de confirmar
-        const confirmarUrl = `http://${req.headers.host}/confirmar/${email}`
-
-
+        // const confirmarUrl = `http://${req.headers.host}/confirmar/${email}`
         //crar el obj user
-        const user = {
-            email
-        }
+        // const user = {
+        //     email
+        // }
 
         //Enviar email
-        await enviarEmail.enviar({
-            user,
-            subject: 'Confirma tu cuenta uptask',
-            confirmarUrl,
-            file: 'confirmAccount'
-        })
+        // await enviarEmail.enviar({
+        //     user,
+        //     subject: 'Confirma tu cuenta uptask',
+        //     confirmarUrl,
+        //     file: 'confirmAccount'
+        // })
 
         //Redirigir
-        req.flash('correcto', 'enviamos un correo, confirma tu cuenta')
+        req.flash('correcto', '¡Perfecto ahora inicia sesión!')
         res.redirect('/register')
     } catch (error) {
         req.flash('error', error.errors.map(error => error.message))
