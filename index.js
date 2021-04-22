@@ -20,7 +20,7 @@ require('./models/User')
 
 db.sync()
     .then(() => console.log('Conectado al servidor'))
-    .catch(error => console.log(error))
+    .catch(error => console.log(error)) 
 
 // Initializations
 const app = express()
